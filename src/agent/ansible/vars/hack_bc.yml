@@ -44,26 +44,25 @@ fabric: {
     hackfab001: {
       cas: ["ca1.ccp"],
       peers: ["anchor@peer1.ccp", "anchor@peer1.dlr1", "anchor@peer1.clnt1"],
-      orderers: ["orderer1.clnt1", "orderer1.clnt2"],
+      orderers: ["orderer1.ord" ],
       zookeepers: ["zookeeper1"],
       kafkas: ["kafka1"]
     },
     hackfab002: {
       cas: ["ca1.dlr1"],
       peers: ["worker@peer2.ccp", "worker@peer2.dlr1", "anchor@peer2.clnt2"],
-      orderers: ["orderer2.clnt1", "orderer2.clnt2"],
+      orderers: ["orderer2.ord"],
       zookeepers: ["zookeeper2"],
       kafkas: ["kafka2"]
     },
     hackfab003: {
       cas: ["ca1.clnt1", "ca1.clnt2"],
       peers: ["worker@peer3.ccp", "worker@peer3.dlr1", "worker@peer3.clnt2"],
-      orderers: ["orderer3.ccp"],
+      orderers: [],
       zookeepers: ["zookeeper3"],
       kafkas: ["kafka3"]
     }
   },
-
   # the container tag for main fabric components such as orderer, peer,
   # tools and chaincode. If left blank, then fabric components will be built
   # from the latest fabric source code with the combination of the refspec

@@ -67,9 +67,9 @@ cluster: {
 
   # stack_size determines how many virtual or physical machines we will have
   # each machine will be named ${name_prefix}001 to ${name_prefix}${stack_size}
-  stack_size: 3,
+  stack_size: 1,
 
-  etcdnodes: ["hackfab001", "hackfab002", "hackfab003"],
+  etcdnodes: ["hackfab001"],
   builders: ["hackfab001"],
 
   flannel_repo: "https://github.com/coreos/flannel/releases/download/v0.10.0/flannel-v0.10.0-linux-amd64.tar.gz",
@@ -79,5 +79,5 @@ cluster: {
 
   # If volume want to be used, specify a size in GB, make volume size 0 if wish
   # not to use volume from your cloud
-  volume_size: 100
+  volume_size: 200
 }

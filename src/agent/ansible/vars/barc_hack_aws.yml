@@ -35,7 +35,7 @@ cluster: {
   # MAP:  updated to work on mac, created symlink on linux
   public_key_file: "/home/ubuntu/fabric/barc_hack_key.pub",
   private_key_file: "/home/ubuntu/fabric/barc_hack_key.pem",
-  ssh_key_name: "fabric_key",
+  ssh_key_name: "barc_hack_key",
   # This variable indicate what IP should be used, only valid values are
   # private_ip or public_ip
   node_ip: "public_ip",

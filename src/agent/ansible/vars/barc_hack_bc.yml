@@ -19,8 +19,8 @@ fabric: {
   peer_db: "CouchDB",
   # options are "true", "false", "client" default is true
   tls: false,
-  # composer: true,
-  composer: false,
+  composer: true,
+  # composer: false,
   generate_certs: true,
   logging_level: "ERROR",
   k8s: {

@@ -1,0 +1,23 @@
+---
+version: '2'
+
+services:
+
+  hl-blockchain-explorer:
+    container_name: hl-blockchain-explorer
+    image: hyperledger-blockchain-explorer 
+    restart: always
+    ports:
+      - "3333:3333"
+      - "8080:8089"
+    network_mode: bridge
+    hostname: hl-blockchain-explorer
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=fabricexplorer
+      - DATABASE_USERNAME=pguser
+      - DATABASE_PASSWD=pgpass 
+    volumes:
+      - /home/ubuntu/blockchain-explorer/app/platform/fabric/config.json:/opt/explorer/app/platform/fabric/config.json
+      - /home/ubuntu/blockchain/examples/dockerConfig/crypto:/tmp/crypto

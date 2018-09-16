@@ -1,0 +1,19 @@
+---
+version: '2'
+
+services:
+
+  blockchain-exploror:
+    container_name: blockchain-explorer
+    image: cdmhack/blockchain-explorer
+    restart: always
+    ports:
+      - "3000:3000"
+    network_mode: bridge
+    hostname: blockchain-explorer
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=fabricexplorer
+      - DATABASE_USERNAME=pguser
+      - DATABASE_PASSWD=pgpass

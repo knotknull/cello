@@ -1,0 +1,21 @@
+---
+version: '2'
+
+services:
+
+  composer-rest:
+    container_name: composer-rest
+    image: cdmhack/composer-rest-server
+    restart: always
+    ports:
+      - "3000:3000"
+    network_mode: bridge
+    hostname: composer-rest
+    environment:
+      - COMPOSER_CARD=ccpAdmin@cdm-test-network
+      - COMPOSER_NAMESPACES=never
+      - COMPOSER_AUTHENTICATION=false
+      - COMPOSER_MULTIUSER=false
+    volumes:
+      - /opt/fabric/barc_hack_bc/.composer:/home/composer/.composer 
+      - /opt/fabric/barc_hack_bc:/opt/fabric/barc_hack_bc

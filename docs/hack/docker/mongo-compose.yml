@@ -1,0 +1,23 @@
+---
+version: '2'
+
+services:
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    network_mode: bridge
+    hostname: mongo
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=rootpass
+      - MONGODB_USER=dbuser
+      - MONGODB_PASS=dbpass
+    volumes:
+      - /home/ubuntu/db:/data/db
+    command: mongod --smallfiles --logpath=/dev/null

@@ -1,0 +1,20 @@
+---
+version: '2'
+
+services:
+
+  composer:
+    container_name: composer-playground
+    image: hyperledger/composer-playground:next
+    restart: always
+    ports:
+      - "8080:8080"
+    network_mode: bridge
+    environment:
+      - COMPOSER_CARD=ccpAdmin@cdm-test-network
+      - COMPOSER_NAMESPACES=never
+      - COMPOSER_AUTHENTICATION=false
+      - COMPOSER_MULTIUSER=false
+    volumes:
+      - /opt/fabric/barc_hack_bc/.composer:/home/composer/.composer 
+      - /opt/fabric/barc_hack_bc:/opt/fabric/barc_hack_bc

@@ -21,8 +21,8 @@ cluster: {
   subnet_id: "", #Optional, if unset will use the first subnet it finds
   vpc_id: "", #Optional, if unset will use the default VPC
   target_os: "ubuntu",
-  image_name: "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20170414", 
-  ami_id: "ami-80861296", 
+  image_name: "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20170414",
+  ami_id: "ami-80861296",
   flavor_name: "m4.xlarge",  # "m2.medium" is big enough for Fabric
   ssh_user: "ubuntu",
   validate_certs: True,
@@ -33,9 +33,9 @@ cluster: {
   # public_key_file: "/home/fabric/.ssh/aws_fabric.pub",
   # private_key_file: "/home/fabric/.ssh/aws_fabric",
   # MAP:  updated to work on mac, created symlink on linux
-  public_key_file: "/home/ubuntu/fabric/barc_hack_key.pub",
-  private_key_file: "/home/ubuntu/fabric/barc_hack_key.pem",
-  ssh_key_name: "barc_hack_key",
+  public_key_file: "/home/ubuntu/fabric/hack_fab_key.pub",
+  private_key_file: "/home/ubuntu/fabric/hack_fab_key.pem",
+  ssh_key_name: "hack_fab_key",
   # This variable indicate what IP should be used, only valid values are
   # private_ip or public_ip
   node_ip: "public_ip",
@@ -62,15 +62,15 @@ cluster: {
 
   # fabric network node names expect to be using a clear pattern, this defines
   # the prefix for the node names.
-  name_prefix: "barchackfab",
-  domain: "barchackfabnet",
+  name_prefix: "hackfab",
+  domain: "hackfabnet",
 
   # stack_size determines how many virtual or physical machines we will have
   # each machine will be named ${name_prefix}001 to ${name_prefix}${stack_size}
   stack_size: 1,
 
-  etcdnodes: ["barchackfab001"],
-  builders: ["barchackfab001"],
+  etcdnodes: ["hackfab001"],
+  builders: ["hackfab001"],
 
   flannel_repo: "https://github.com/coreos/flannel/releases/download/v0.10.0/flannel-v0.10.0-linux-amd64.tar.gz",
   etcd_repo: "https://github.com/coreos/etcd/releases/download/v3.3.2/etcd-v3.3.2-linux-amd64.tar.gz",

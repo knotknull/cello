@@ -42,7 +42,7 @@ fabric: {
   # all names must be in lower case. Numeric characters cannot be used to start
   # or end a name. Character dot (.) can only be used in names of peers and orderers.
   network: {
-    barchackfab001: {
+    hackfab001: {
       cas: ["ca1.ccp", "ca1.dlr1",  "ca1.dlr2",  "ca1.dlr3",  "ca1.clnt1",  "ca1.clnt2",  "ca1.clnt3",  "ca1.clnt4" ,  "ca1.clnt5" ],
       peers: ["anchor@peer1.ccp", "anchor@peer1.dlr1", "anchor@peer1.dlr2", "anchor@peer1.dlr3" , "anchor@peer1.clnt1" , "anchor@peer1.clnt2" , "anchor@peer1.clnt3" , "anchor@peer1.clnt4" , "anchor@peer1.clnt5" ],
       orderers: ["orderer1.ord" ],

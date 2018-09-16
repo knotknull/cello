@@ -1,0 +1,98 @@
+
+
+0.  Spin up an ansible server:
+      - t2.small
+      - 50 GB (?) ebs
+      - ami-80861296
+
+1.  Make sure that ~/fabric has the following:
+      hack.env
+      hack_fab_key.pem
+      hack_fab_key.pub
+
+2.  Add the ssh key
+eval $(ssh-agent -s) && ssh-add /home/ubuntu/fabric/hack_fab_key.pem
+
+3.  Export the following env vars (via hac.env)
+      export AWS_ACCESS_KEY="AK..............."
+      export AWS_SECRET_KEY="02............................."
+      export NETWORKNAME="derivhack-network.bna"
+
+4.  Install the following dependencies
+
+sudo apt-get update
+sudo apt-get install git make -y
+sudo apt-get install python-dev python-pip libssl-dev libffi-dev -y
+sudo pip install --upgrade pip boto boto3 shade
+sudo pip install 'ansible>=2.3.0.0'
+
+
+5.  clone the cello code
+cd ~  &&  git clone -b hack https://github.com/knotknull/cello.git
+
+6.  mv bin && docker files
+  mkdir ~/bin
+  mkdir ~/docker
+  cp ~/cello/docks/hack/bin/* ~/bin
+  cp ~/cello/docks/hack/docker/* ~/docker
+
+
+
+7.  make db directories
+    mkdir ~/db
+    mkdir ~/pgdb
+
+
+
+
+
+10. mongo
+
+11. postgres
+
+12. Start Composer
+
+13. Build Composer REST Docker file
+
+14. Start Composer REST
+
+15. clone blockchain-exploreer
+git clone https://github.com/hyperledger/blockchain-explorer.git
+
+	# setup node 8.x
+cd ~
+curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt-get install nodejs -y
+nodejs -v 
+npm -v
+sudo apt-get install jq
+sudo apt-get install gcc g++ make
+sudo apt-get install build-essential
+
+
+
+
+
+17. update dockerfile
+
+cd blockchain-explorer/app
+update explorerconfig.json
+to
+postgresSQL {
+
+ubuntu@barchackfab001:~/blockchain-explorer/app$ vi explorerconfig.json
+  "postgreSQL": {
+    "host": "postgres",
+    "port": "5432",
+    "database": "fabricexplorer",
+    "username": "pgpass",
+    "passwd": "psuser"
+  },
+
+
+
+16. Build Dockerfile
+git clone https://github.com/hyperledger/blockchain-explorer.git
+
+16. Start blockchain explorer

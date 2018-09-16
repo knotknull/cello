@@ -1,0 +1,26 @@
+---
+version: '2'
+
+services:
+
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    network_mode: bridge
+    hostname: postgres
+    environment:
+      POSTGRES_PASSWORD: pgpass
+      POSTGRES_USER: pguser
+      PGDATA: /var/lib/postgresql/data 
+    volumes:
+      - /home/ubuntu/pgdb:/var/lib/postgresql/data 
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    network_mode: bridge
+    hostname: adminer
+    ports:
+      - 8099:8099

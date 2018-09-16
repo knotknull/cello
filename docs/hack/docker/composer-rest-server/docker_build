@@ -1,0 +1,1 @@
+docker build -t cdmhack/composer-rest-server .

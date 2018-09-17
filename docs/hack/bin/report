@@ -1,0 +1,11 @@
+docker run -v /home/ubuntu/tmp:/tmp -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next report 
+
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next identity list -c clnt1Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next identity list -c dlr3Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next network ping -c clnt2Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next network ping -c clnt3Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next network ping -c clnt4Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next network ping -c clnt5Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next network ping -c dlr1Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next network ping -c dlr2Admin@derivhack-network
+# docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --rm hyperledger/composer-cli:next network ping -c dlr3Admin@derivhack-network

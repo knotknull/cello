@@ -11,10 +11,10 @@ services:
       - "8080:8080"
     network_mode: bridge
     environment:
-      - COMPOSER_CARD=ccpAdmin@cdm-test-network
+      - COMPOSER_CARD=ccpAdmin@derivhack-network
       - COMPOSER_NAMESPACES=never
       - COMPOSER_AUTHENTICATION=false
       - COMPOSER_MULTIUSER=false
     volumes:
-      - /opt/fabric/barc_hack_bc/.composer:/home/composer/.composer 
-      - /opt/fabric/barc_hack_bc:/opt/fabric/barc_hack_bc
+      - /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer 
+      - /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc

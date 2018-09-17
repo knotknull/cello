@@ -1,0 +1,17 @@
+## ubuntu@barchackfab001:/opt/fabric/hack_fab_bc/run$ ls -l
+## -rw-r--r--  1 root root  5579 Sep 15 17:07 ca-compose.yml
+## -rw-r--r--  1 root root   530 Sep 15 17:08 cli-compose.yml
+## -rw-r--r--  1 root root   532 Sep 15 17:07 kafka-compose.yml
+## -rw-r--r--  1 root root   876 Sep 15 17:07 orderer-compose.yml
+## -rw-r--r--  1 root root 10678 Sep 15 17:07 peer-compose.yml
+## -rw-r--r--  1 root root   361 Sep 15 17:07 zookeeper-compose.yml
+
+docker-compose -p hack_fab_bc.zookeeper-compose -f /opt/fabric/hack_fab_bc/run/zookeeper-compose.yml up -d 
+docker-compose -p hack_fab_bc.orderer-compose -f /opt/fabric/hack_fab_bc/run/orderer-compose.yml up -d 
+docker-compose -p hack_fab_bc.kafka-compose -f /opt/fabric/hack_fab_bc/run/kafka-compose.yml up -d 
+docker-compose -p hack_fab_bc.peer-compose -f /opt/fabric/hack_fab_bc/run/peer-compose.yml up -d 
+docker-compose -p hack_fab_bc.ca-compose -f /opt/fabric/hack_fab_bc/run/ca-compose.yml up 
+docker-compose -p hack_fab_bc.cli -f /opt/fabric/hack_fab_bc/run/cli-compose.yml up -d
+
+
+

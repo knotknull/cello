@@ -1,0 +1,153 @@
+ {
+	"network-config": {
+		"clnt1": {
+			"name": "peer1-clnt1",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-clnt1:7051",
+				"events": "grpcs://peer1-clnt1:7053",
+				"server-hostname": "peer1-clnt1",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt1/tlsca/tlsca.clnt1-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/clnt1/users/Admin@clnt1/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt1/users/Admin@clnt1/msp/signcerts"
+
+			}
+		},
+		"clnt2": {
+			"name": "peer1-clnt2",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-clnt2:7051",
+				"events": "grpcs://peer1-clnt2:7053",
+				"server-hostname": "peer1-clnt2",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt2/tlsca/tlsca.clnt2-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/clnt2/users/Admin@clnt2/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt2/users/Admin@clnt2/msp/signcerts"
+
+			}
+		},
+		"clnt3": {
+			"name": "peer1-clnt3",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-clnt3:7051",
+				"events": "grpcs://peer1-clnt3:7053",
+				"server-hostname": "peer1-clnt3",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt3/tlsca/tlsca.clnt3-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/clnt3/users/Admin@clnt3/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt3/users/Admin@clnt3/msp/signcerts"
+
+			}
+		},
+		"clnt4": {
+			"name": "peer1-clnt4",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-clnt4:7051",
+				"events": "grpcs://peer1-clnt4:7053",
+				"server-hostname": "peer1-clnt4",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt4/tlsca/tlsca.clnt4-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/clnt4/users/Admin@clnt4/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt4/users/Admin@clnt4/msp/signcerts"
+
+			}
+		},
+		"clnt5": {
+			"name": "peer1-clnt5",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-clnt5:7051",
+				"events": "grpcs://peer1-clnt5:7053",
+				"server-hostname": "peer1-clnt5",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt5/tlsca/tlsca.clnt5-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/clnt5/users/Admin@clnt5/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt5/users/Admin@clnt5/msp/signcerts"
+
+			}
+		},
+		"dlr1": {
+			"name": "peer1-dlr1",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-dlr1:7051",
+				"events": "grpcs://peer1-dlr1:7053",
+				"server-hostname": "peer1-dlr1",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr1/tlsca/tlsca.dlr1-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/dlr1/users/Admin@dlr1/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr1/users/Admin@dlr1/msp/signcerts"
+
+			}
+		},
+		"dlr2": {
+			"name": "peer1-dlr2",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-dlr2:7051",
+				"events": "grpcs://peer1-dlr2:7053",
+				"server-hostname": "peer1-dlr2",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr2/tlsca/tlsca.dlr2-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/dlr2/users/Admin@dlr2/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr2/users/Admin@dlr2/msp/signcerts"
+
+			}
+		},
+		"dlr3": {
+			"name": "peer1-dlr3",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-dlr3:7051",
+				"events": "grpcs://peer1-dlr3:7053",
+				"server-hostname": "peer1-dlr3",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr3/tlsca/tlsca.dlr3-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/dlr3/users/Admin@dlr3/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr3/users/Admin@dlr3/msp/signcerts"
+
+			}
+		},
+		"ccp": {
+			"name": "peer1-ccp",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-ccp:7051",
+				"events": "grpcs://peer1-ccp:7053",
+				"server-hostname": "peer1-ccp",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/ccp/tlsca/tlsca.ccp-cert.pem"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/ccp/users/Admin@ccp/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/ccp/users/Admin@ccp/msp/signcerts"
+
+			}
+		}
+	},
+	"channel": "firstchannel",
+	"orderers": [{
+		"mspid": "ord",
+		"server-hostname": "orderer1-ord",
+		"requests": "grpcs://orderer1-ord:7050",
+		"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/ord/orderers/orderer1-ord.ord/tls/ca.crt"
+	}],
+	"keyValueStore": "/tmp/fabric-client-kvs",
+	"configtxgenToolPath": "/opt/fabric/bin",
+	"SYNC_START_DATE_FORMAT": "YYYY/MM/DD",
+	"syncStartDate": "2018/01/01",
+	"eventWaitTime": "30000",
+	"license": "Apache-2.0",
+	"version": "1.1"
+}

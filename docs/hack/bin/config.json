@@ -1,0 +1,63 @@
+{
+	"network-config": {
+		"clnt1": {
+			"name": "peer1-clnt1",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-clnt1:7051",
+				"events": "grpcs://peer1-clnt1:7053",
+				"server-hostname": "peer1-clnt1",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt1/peers/peer1-clnt1.clnt1/tls/ca.crt"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/clnt1/users/Admin@clnt1/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/clnt1/users/Admin@clnt1/msp/signcerts"
+
+			}
+		},
+		"dlr1": {
+			"name": "peer1-dlr1",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-dlr1:7051",
+				"events": "grpcs://peer1-dlr1:7053",
+				"server-hostname": "peer1-dlr1",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr1/peers/peer1-dlr1.dlr1/tls/ca.crt"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/dlr1/users/Admin@dlr1/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/dlr1/users/Admin@dlr1/msp/signcerts"
+
+			}
+		},
+		"ccp": {
+			"name": "peer1-ccp",
+			"mspid": "msp",
+			"peer1": {
+				"requests": "grpcs://peer1-ccp:7051",
+				"events": "grpcs://peer1-ccp:7053",
+				"server-hostname": "peer1-ccp",
+				"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/ccp/peers/peer1-ccp.ccp/tls/ca.crt"
+			},
+			"admin": {
+				"key":  "/opt/fabric/hack_fab_bc/run/keyfiles/ccp/users/Admin@ccp/msp/keystore",
+				"cert": "/opt/fabric/hack_fab_bc/run/keyfiles/ccp/users/Admin@ccp/msp/signcerts"
+
+			}
+		}
+	},
+	"channel": "firstchannel",
+	"orderers": [{
+		"mspid": "ord",
+		"server-hostname": "orderer1-ord",
+		"requests": "grpcs://orderer1-ord:7050",
+		"tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/ord/orderers/orderer1-ord.ord/tls/ca.crt"
+	}],
+	"keyValueStore": "/tmp/fabric-client-kvs",
+	"configtxgenToolPath": "/opt/fabric/bin",
+	"SYNC_START_DATE_FORMAT": "YYYY/MM/DD",
+	"syncStartDate": "2018/01/01",
+	"eventWaitTime": "30000",
+	"license": "Apache-2.0",
+	"version": "1.1"
+}

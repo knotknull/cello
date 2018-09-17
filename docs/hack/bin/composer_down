@@ -1,0 +1,2 @@
+## docker run -v /opt/fabric/hack_fab_bc/.composer:/home/composer/.composer -v /opt/fabric/hack_fab_bc:/opt/fabric/hack_fab_bc --name composer-playground --publish 8080:8080 --detach hyperledger/composer-playground:next
+docker-compose -p hack_fab_bc.composer -f ~/docker/composer-compose.yml down

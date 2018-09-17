@@ -1,0 +1,51 @@
+After massive amount of mucking around with the app/platform/fabric/config.json file, here is how I finally got it to work.
+
+
+1.  Copied the following composer file as config.json
+
+ubuntu@hackfab001:
+
+cp /opt/fabric/hack_fab_bc/.composer/cards/ccpAdmin@derivhack-network/connection.json   ~/blockchain-explorer/app/platform/fabric/config.json
+
+
+NOTE:  had to run it thru a JSON formatter at https://duckduckgo.com/?q=json+formatter&t=ffab&ia=answer  first
+
+
+2.  Add the following as the first two lines
+
+from :
+{                                                              
+  "name": "ccp-network",
+  "x-type": "hlfv1",   
+to :
+ 
+{
+  "network-configs": {
+  "name": "ccp-network",
+  "x-type": "hlfv1",
+
+
+3. To match out the newly added top right paren "{"
+add the folloing to the bottom "}"
+
+
+  },
+  "channel": "firstchannel",
+  "orderers": [
+    {
+      "mspid": "ord",
+      "server-hostname": "orderer1-ord",
+      "requests": "grpcs://orderer1-ord:7050",
+      "tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/ord/orderers/orderer1-ord.ord/tls/ca.crt"
+    }
+  ],
+  "keyValueStore": "/tmp/fabric-client-kvs",
+  "configtxgenToolPath": "/opt/fabric/bin",
+  "SYNC_START_DATE_FORMAT": "YYYY/MM/DD",
+  "syncStartDate": "2018/01/01",
+  "eventWaitTime": "30000",
+  "license": "Apache-2.0",
+  "version": "1.1"
+}
+
+   

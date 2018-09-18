@@ -1,0 +1,1 @@
+docker-compose -p hack_fab_bc.postgres -f ~/docker/postgres-compose.yml up -d

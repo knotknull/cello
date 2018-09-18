@@ -9,6 +9,8 @@ services:
     restart: always
     network_mode: bridge
     hostname: postgres
+    ports:
+      - 5432:5432
     environment:
       POSTGRES_PASSWORD: pgpass
       POSTGRES_USER: pguser

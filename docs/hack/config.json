@@ -1,0 +1,210 @@
+{
+  "network-configs": {
+    "name": "ccp-network",
+    "x-type": "hlfv1",
+    "version": "1.0.0",
+    "client": {
+      "organization": "ccp",
+      "connection": {
+        "timeout": {
+          "peer": {
+            "endorser": "300",
+            "eventHub": "300",
+            "eventReg": "300"
+          },
+          "orderer": "300"
+        }
+      }
+    },
+    "channels": {
+      "firstchannel": {
+        "orderers": [
+          "orderer1-ord"
+        ],
+        "peers": {
+          "peer1-ccp": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-dlr1": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-dlr2": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-dlr3": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-clnt1": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-clnt2": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-clnt3": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-clnt4": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          },
+          "peer1-clnt5": {
+            "endorsingPeer": true,
+            "chaincodeQuery": true,
+            "eventSource": true
+          }
+        }
+      }
+    },
+    "organizations": {
+      "ccp": {
+        "mspid": "ccp",
+        "peers": [
+          "peer1-ccp"
+        ],
+        "certificateAuthorities": [
+          "ca1-ccp"
+        ]
+      },
+      "clnt1": {
+        "mspid": "clnt1",
+        "peers": [
+          "peer1-clnt1"
+        ],
+        "certificateAuthorities": [
+          "ca1-clnt1"
+        ]
+      },
+      "clnt2": {
+        "mspid": "clnt2",
+        "peers": [
+          "peer1-clnt2"
+        ],
+        "certificateAuthorities": [
+          "ca1-clnt2"
+        ]
+      },
+      "clnt3": {
+        "mspid": "clnt3",
+        "peers": [
+          "peer1-clnt3"
+        ],
+        "certificateAuthorities": [
+          "ca1-clnt3"
+        ]
+      },
+      "clnt4": {
+        "mspid": "clnt4",
+        "peers": [
+          "peer1-clnt4"
+        ],
+        "certificateAuthorities": [
+          "ca1-clnt4"
+        ]
+      },
+      "clnt5": {
+        "mspid": "clnt5",
+        "peers": [
+          "peer1-clnt5"
+        ],
+        "certificateAuthorities": [
+          "ca1-clnt5"
+        ]
+      },
+      "dlr1": {
+        "mspid": "dlr1",
+        "peers": [
+          "peer1-dlr1"
+        ],
+        "certificateAuthorities": [
+          "ca1-dlr1"
+        ]
+      },
+      "dlr2": {
+        "mspid": "dlr2",
+        "peers": [
+          "peer1-dlr2"
+        ],
+        "certificateAuthorities": [
+          "ca1-dlr2"
+        ]
+      },
+      "dlr3": {
+        "mspid": "dlr3",
+        "peers": [
+          "peer1-dlr3"
+        ],
+        "certificateAuthorities": [
+          "ca1-dlr3"
+        ]
+      },
+      "ord": {
+        "mspid": "ord",
+        "peers": [],
+        "certificateAuthorities": []
+      }
+    },
+    "orderers": {
+      "orderer1-ord": {
+        "url": "grpc://orderer1-ord:7050",
+        "grpcOptions": {
+          "ssl-target-name-override": "orderer1-ord"
+        },
+        "tlsCACerts": {
+          "pem": "/home/ubuntu/cello/src/agent/ansible/roles/deploy_compose/../../vars/hack_fab_bc/fabric/run/keyfiles/ord/orderers/orderer1-ord.ord/tls/ca.crt"
+        }
+      }
+    },
+    "peers": {
+      "peer1-ccp": {
+        "url": "grpc://peer1-ccp:7051",
+        "eventUrl": "grpc://peer1-ccp:7053",
+        "grpcOptions": {
+          "ssl-target-name-override": "peer1-ccp"
+        },
+        "tlsCACerts": {
+          "pem": "/home/ubuntu/cello/src/agent/ansible/roles/deploy_compose/../../vars/hack_fab_bc/fabric/run/keyfiles/ccp/tlsca/tlsca.ccp-cert.pem"
+        }
+      }
+    },
+    "certificateAuthorities": {
+      "ca1-ccp": {
+        "url": "http://ca1-ccp:7054",
+        "caName": "ca1-ccp",
+        "httpOptions": {
+          "verify": false
+        }
+      }
+    }
+  },
+  "channel": "firstchannel",
+  "orderers": [
+    {
+      "mspid": "ord",
+      "server-hostname": "orderer1-ord",
+      "requests": "grpcs://orderer1-ord:7050",
+      "tls_cacerts": "/opt/fabric/hack_fab_bc/run/keyfiles/ord/orderers/orderer1-ord.ord/tls/ca.crt"
+    }
+  ],
+  "keyValueStore": "/tmp/fabric-client-kvs",
+  "configtxgenToolPath": "/opt/fabric/bin",
+  "SYNC_START_DATE_FORMAT": "YYYY/MM/DD",
+  "syncStartDate": "2018/01/01",
+  "eventWaitTime": "30000",
+  "license": "Apache-2.0",
+  "version": "1.1"
+}

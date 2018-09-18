@@ -1,0 +1,3 @@
+docker cp ~/blockchain-explorer/app/persistence/fabric/postgreSQL/db/updatepg.sql postgres:/docker-entrypoint-initdb.d/
+
+docker exec postgres psql -U pguser  -a -v dbname="fabricexplorer" -v user="pguser" -v passwd="'pgpass'" -f /docker-entrypoint-initdb.d/updatepg.sql

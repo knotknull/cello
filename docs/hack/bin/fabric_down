@@ -6,12 +6,12 @@
 ## -rw-r--r--  1 root root 10678 Sep 15 17:07 peer-compose.yml
 ## -rw-r--r--  1 root root   361 Sep 15 17:07 zookeeper-compose.yml
 
-docker-compose -p hack_fab_bc.zookeeper-compose -f /opt/fabric/hack_fab_bc/run/zookeeper-compose.yml up -d 
-docker-compose -p hack_fab_bc.orderer-compose -f /opt/fabric/hack_fab_bc/run/orderer-compose.yml up -d 
-docker-compose -p hack_fab_bc.kafka-compose -f /opt/fabric/hack_fab_bc/run/kafka-compose.yml up -d 
-docker-compose -p hack_fab_bc.peer-compose -f /opt/fabric/hack_fab_bc/run/peer-compose.yml up -d 
-docker-compose -p hack_fab_bc.ca-compose -f /opt/fabric/hack_fab_bc/run/ca-compose.yml up 
-docker-compose -p hack_fab_bc.cli -f /opt/fabric/hack_fab_bc/run/cli-compose.yml up -d
+docker-compose -p hack_fab_bc.zookeeper-compose -f /opt/fabric/hack_fab_bc/run/zookeeper-compose.yml down 
+docker-compose -p hack_fab_bc.orderer-compose -f /opt/fabric/hack_fab_bc/run/orderer-compose.yml down
+docker-compose -p hack_fab_bc.kafka-compose -f /opt/fabric/hack_fab_bc/run/kafka-compose.yml down
+docker-compose -p hack_fab_bc.peer-compose -f /opt/fabric/hack_fab_bc/run/peer-compose.yml down
+docker-compose -p hack_fab_bc.ca-compose -f /opt/fabric/hack_fab_bc/run/ca-compose.yml down
+docker-compose -p hack_fab_bc.cli -f /opt/fabric/hack_fab_bc/run/cli-compose.yml down
 
 
 

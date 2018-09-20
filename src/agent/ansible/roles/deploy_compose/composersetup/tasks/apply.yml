@@ -22,11 +22,14 @@
     owner: 1000
     group: 1000
 
+## MAP    - "composer-cli:next"
+## MAP    - "composer-playground:next"
+
 - name: Pull composer container images from the docker hub
   command: "docker pull {{ fabric.repo.url }}{{ item }}"
   with_items:
-    - "composer-cli:next"
-    - "composer-playground:next"
+    - "composer-cli:0.20"
+    - "composer-playground:0.20"
   tags: "pullcomposerimages"
 
 - name: Check if PeerAdmin card is already imported

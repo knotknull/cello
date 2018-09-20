@@ -43,8 +43,8 @@ fabric: {
   # or end a name. Character dot (.) can only be used in names of peers and orderers.
   network: {
     hackfab001: {
-      cas: ["ca1.ccp", "ca1.dlr1",  "ca1.dlr2",  "ca1.dlr3",  "ca1.clnt1",  "ca1.clnt2",  "ca1.clnt3",  "ca1.clnt4" ,  "ca1.clnt5" ],
-      peers: ["anchor@peer1.ccp", "anchor@peer1.dlr1", "anchor@peer1.dlr2", "anchor@peer1.dlr3" , "anchor@peer1.clnt1" , "anchor@peer1.clnt2" , "anchor@peer1.clnt3" , "anchor@peer1.clnt4" , "anchor@peer1.clnt5" ],
+      cas: ["ca1.ccp", "ca1.dlr",  "ca1.clnt",  "ca1.reg" ],
+      peers: ["anchor@peer1.ccp", "anchor@peer1.dlr", "anchor@peer1.clnt", "anchor@peer1.reg" ],
       orderers: ["orderer1.ord" ],
       zookeepers: ["zookeeper1"],
       kafkas: ["kafka1"]
@@ -61,13 +61,16 @@ fabric: {
   #     s390x-0.4.2                                # release 0.4.2 for s390x
   #     048c91eb47812582f36665fbea3d7e0e68e396bf   # commit build
   #     x86_64-1.0.0-snapshot-8d3275f              # snapshot build
-  baseimage_tag: "amd64-1.1.0",
+  ## MAP  baseimage_tag: "amd64-1.1.0",
+  baseimage_tag: "amd64-1.2.0",
 
   # The container tag for accessory fabric components such as ca, kafka,
   # zookeeper and couchdb. It has to be the full tag just like the
   # baseimage_tag
-  helper_tag: "amd64-0.4.8",
-  ca: { admin: "admin", adminpw: "adminpw", image_tag: "amd64-1.1.0" },
+  # MAP  helper_tag: "amd64-0.4.8",
+  helper_tag: "amd64-0.4.10",
+  # MAP ca: { admin: "admin", adminpw: "adminpw", image_tag: "amd64-1.1.0" },
+  ca: { admin: "admin", adminpw: "adminpw", image_tag: "amd64-1.2.0" },
 
   # Only use this field when you have a docker repository.
   repo: {
@@ -81,6 +84,6 @@ fabric: {
     # locations to download fabric binaries. This url should point to a
     # compressed such as tar or zip file which contains necessary binaries
     # such as configtxgen, configtxlator, cryptogen etc.
-    bin: "https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric/hyperledger-fabric/linux-amd64-1.1.0/hyperledger-fabric-linux-amd64-1.1.0.tar.gz"
+    bin: "https://nexus.hyperledger.org/content/repositories/releases/org/hyperledger/fabric/hyperledger-fabric/linux-amd64-1.2.0/hyperledger-fabric-linux-amd64-1.2.0.tar.gz"
   }
 }
